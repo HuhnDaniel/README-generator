@@ -2,6 +2,8 @@ const inquirer = require("inquirer");
 const fs = require("fs");
 const util = require("util");
 
+const writeFileAsync = util.promisify(fs.writeFile);
+
 function promptUser() {
     return inquirer.prompt([
         {
@@ -47,11 +49,13 @@ function promptUser() {
     ])
 }
 
-function writeToFile(fileName, data) {
-}
-
-function init() {
-
+async function init() {
+    try {
+        const answers = await promptUser();
+        console.log(answers);
+    } catch(err) {
+    console.error(err);
+    }
 }
 
 init();
