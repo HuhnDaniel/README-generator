@@ -1,10 +1,13 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
 const util = require("util");
-const generateMarkdown = require("./utils/generateMarkdown")
+const axios = require("axios");
+const generateMarkdown = require("./utils/generateMarkdown");
 
+// Function to write file as a promise
 const writeFileAsync = util.promisify(fs.writeFile);
 
+// Function to prompt user for README information
 function promptUser() {
     return inquirer.prompt([
         {
@@ -50,14 +53,23 @@ function promptUser() {
     ])
 }
 
+// Main function to run when program is run
 async function init() {
     try {
         const answers = await promptUser();
 
+        // Get users github data
+        const { data } = await axios.get(
+            `https://api.github.com/users/${answers.gitHubUser}`
+        );
+        answers.profilePic = data.avatar_url;
+        answers.gitHubEmail = data.email;
+
+        // Generate md file
         const md = generateMarkdown(answers);
         console.log(md);
-    } catch(err) {
-    console.error(err);
+    } catch (err) {
+        console.error(err);
     }
 }
 

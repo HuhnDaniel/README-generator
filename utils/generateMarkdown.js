@@ -1,9 +1,8 @@
 function generateMarkdown(data) {
-  console.log(data);
-  return `
-# ${data.title}
+    return `
+    # ${data.gitHubUser}
 
-`;
+    `;
 }
 
 module.exports = generateMarkdown;
