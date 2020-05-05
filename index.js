@@ -1,6 +1,7 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
 const util = require("util");
+const generateMarkdown = require("./utils/generateMarkdown")
 
 const writeFileAsync = util.promisify(fs.writeFile);
 
@@ -52,7 +53,9 @@ function promptUser() {
 async function init() {
     try {
         const answers = await promptUser();
-        console.log(answers);
+
+        const md = generateMarkdown(answers);
+        console.log(md);
     } catch(err) {
     console.error(err);
     }
