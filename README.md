@@ -1,4 +1,5 @@
 # README-generator
+![GitHub repo size](https://img.shields.io/github/repo-size/HuhnDaniel/README-generator)
 Automatically generate a good README.md file based on user input
 ## Table of Contents
 - [About This Project](#about-this-project)
