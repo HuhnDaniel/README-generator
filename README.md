@@ -11,3 +11,4 @@ Automatically generate a good README.md file based on user input
 - Daniel Moody-Huhn: 
   - https://github.com/HuhnDaniel/
   - https://huhndaniel.github.io/
+.github.io/

@@ -65,9 +65,13 @@ async function init() {
         answers.profilePic = data.avatar_url;
         answers.gitHubEmail = data.email;
 
-        // Generate md file
+        // Generate .md file contents
         const md = generateMarkdown(answers);
-        console.log(md);
+        
+        // Create new .md file with generated contents
+        await writeFileAsync("README-new.md", md);
+
+        console.log("Successfully created new README");
     } catch (err) {
         console.error(err);
     }
