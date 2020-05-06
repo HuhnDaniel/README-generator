@@ -1,3 +1,5 @@
+const inquirer = require("inquirer");
+
 function generateMarkdown(data) {
     const repo = data.title.replace(" ", "-").toLowerCase();
     console.log(repo);
@@ -14,6 +16,15 @@ ${data.description}
 - [Contributing](#contributing)
 - [Tests](#tests)
 - [Questions](#questions)
+## Installation
+To install necessary dependencies, run the following command:  
+\`\`\`
+npm i
+\`\`\`
+## Usage
+${data.usage}
+## License
+This project is licensed under the ${data.license} license.
 `;
 
 }
