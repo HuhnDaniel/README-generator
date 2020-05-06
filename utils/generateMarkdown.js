@@ -25,6 +25,16 @@ npm i
 ${data.usage}
 ## License
 This project is licensed under the ${data.license} license.
+## Contributing
+${data.contributing}
+## Tests
+To run tests, run the following command:
+\`\`\`
+${data.tests}
+\`\`\`
+## Questions
+![${data.gitHubUser}'s GitHub avatar](${data.profilePic})
+If you have any questions about the repo, please open an issue or contact ${data.gitHubUser} at ${data.gitHubEmail}.
 `;
 
 }
