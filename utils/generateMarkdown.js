@@ -1,11 +1,9 @@
 const inquirer = require("inquirer");
 
 function generateMarkdown(data) {
-    const repo = data.title.replace(" ", "-").toLowerCase();
-
     return `
 # ${data.title}
-![GitHub repo size](https://img.shields.io/github/repo-size/${data.gitHubUser}/${repo})
+![GitHub repo size](https://img.shields.io/github/repo-size/${data.gitHubUser}/${data.repo})
 ## Description
 ${data.description}
 ## Table of Contents

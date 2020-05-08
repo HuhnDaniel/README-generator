@@ -17,6 +17,11 @@ function promptUser() {
         },
         {
             type: "input",
+            message: "What is the name of the repository that this projects is saved in: ",
+            name: "repo"
+        },
+        {
+            type: "input",
             message: "Describe your project: ",
             name: "description"
         },
