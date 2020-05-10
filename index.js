@@ -74,7 +74,7 @@ async function init() {
         const md = generateMarkdown(answers);
         
         // Create new .md file with generated contents
-        await writeFileAsync("README-new.md", md);
+        await writeFileAsync("./results/README.md", md);
 
         console.log("Successfully created new README");
     } catch (err) {

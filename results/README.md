@@ -16,11 +16,11 @@ To install necessary dependencies, run the following command:
 npm i
 ```
 ## Usage
-To be used by people looking for a campsite
+For use by people who like to camp
 ## License
 This project is licensed under the MIT license.
 ## Contributing
-Contact me first
+Contact me first 
 ## Tests
 To run tests, run the following command:
 ```
